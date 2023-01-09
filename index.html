@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie center</title>
+</head>
+<body onscroll="myFunction()">
+    <div class="root" >
+        <div class="sticky top-header" id="sticky">
+            <div class="logo">
+                <img src="img/movi.svg" alt="" height="25px" width="25px">
+                Movie
+            </div>
+            <nav>
+                <ul>
+                    <a href="" class="active"><li>Home</li></a>
+                    <a href=""><li>Movies</li></a>
+                    <a href=""><li>Tv shows</li></a>
+                    <a href=""><li>Web Series</li></a>
+                </ul>
+            </nav>
+            <div class="search">  
+                <label class="label" for="search"><img src="img/search.svg" alt="" width="25px" height="25px"></label>
+                <input type="search" class="input-search" name="search" placeholder="Search Movie here">
+                <img class="menu" src="img/menu.svg" alt="" width="25px" height="25px">
+              </div>
+        </div>
+        <div class="banner">
+            <div class="shadow-left">
+                <div class="b-txt">
+                    <h2 class="banner-title">God of war</h2>
+                <p class="banner-descrpt">God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console, and has become a flagship title for the PlayStation brand, consisting of ten games across multiple platforms with an eleventh currently in development.</p>
+                <div class="banner-trailer"> <img src="img/youtube.svg" alt="" width="25px"> Watch trailer</div>
+                </div>
+            </div>
+        </div>
+        <section class="m-section" style="  margin-top: 70vh;">
+            <h2 style="margin-left:10%;">New Releases <a href="" class="link"> Explore All</a></h2>
+            <div class="m-list">
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+            </div>
+        </section>
+        <section class="m-section">
+            <h2 style="margin-left:10%;">Trending Movies <a href="" class="link"> Explore All</a></h2>
+            
+                <div class="m-list">
+                    <div class="m-item">
+                        <div class="img"></div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img"></div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img"></div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img"></div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img"></div>               
+                        <p>Uncharted</p>
+                    </div>
+                </div>
+            
+        </section>
+        <section class="m-section">
+            <h2 style="margin-left:10%;">Trending Series <a href="" class="link"> Explore All</a></h2>
+            <div class="m-list">
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img"></div>               
+                    <p>Uncharted</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var bar = document.getElementById("sticky")
+        window.onscroll = function() {
+
+        // pageYOffset or scrollY
+        if (window.pageYOffset > 0) {
+            bar.classList.add('dark')
+        } else {
+            bar.classList.remove('dark')
+        }
+        }
+        $('#s-icon').click(function() {
+           $('#s-input').toggleClass()
+        })
+    </script>
+</body>
+</html>

@@ -52,6 +52,7 @@ a.active{
     width: 100%;
   }
 .logo{
+    font-size: 2rem;
     margin-left: 30px;
 }
 nav ul{
@@ -62,6 +63,8 @@ nav ul{
 nav a{
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 .search{
    margin-right: 1%;
@@ -96,14 +99,16 @@ nav a{
 }
 .banner-title{
     font-family: Bookman Old Style;
+    font-size: 4rem;
+    color: white;
 }
 .banner-descrpt{
-    font-size:smaller;
+    font-size:1rem;
     overflow: auto;
     height:70%;
 }
 .banner-trailer{
-    margin-top: 10%;
+    margin-top: 10px;
     height: 10%;
     width: fit-content;
     border-radius: 10px;
@@ -150,7 +155,7 @@ nav a{
 }
 .link{
     color: #b80b0b;
-    font-size: x-small;
+    font-size: 0.8rem;
     text-decoration: none;
 }
 .search{
@@ -164,6 +169,7 @@ nav a{
     width: 100px;
     border-style: none;
     padding: 10px;
+    display: none;
     font-size: 18px;
     letter-spacing: 2px;
     outline: none;
@@ -255,10 +261,10 @@ nav a{
         width:100%;
     }
     .banner-title{
-        font-size: large;
+        font-size: 2.5rem;
     }
     .banner-descrpt{
-        font-size: x-small;
+        font-size: 1rem;
         margin-left: 10px;
         height: 40%;
         scroll-behavior: smooth;

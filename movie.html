@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie</title>
+    <style>
+        body{
+            background-color: #3C4170;
+        }
+        main{
+            padding-left: 5%;
+        }
+        .m-bana{
+            width: 100vw;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .ban-detail{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .ban-detail .rate{
+            width: 50%;
+            text-align: end;
+            align-self: flex-end;
+            justify-content: flex-end;
+        }
+        .ban-cont{
+            width: 80vw;
+            display: flex;
+            overflow: hidden;
+            gap: 0;
+            border: solid black 1px;
+            height: 60vh;
+        }
+        .ban-cont .ban-tr{
+            overflow:hidden;
+            width: 60%;
+            position: relative;
+        }
+        .ban-cont .ban-tr button{
+            width: 25%;
+            display: block;
+            position: absolute;
+            bottom: 10%;
+            left: 30%;
+            border: none;
+            height: fit-content;
+            box-shadow: black 2px 2px 5px;
+            padding: 10px; 
+            border-radius: 5px;
+            background-color: #a12222;
+            color: #fff;
+            z-index: 999;
+        }
+        .ban-cont .ban-im{
+            width: 40%;
+        }
+        .ban-cont .ban-im img,.ban-tr img{
+            height: 100%;
+            z-index: 1;
+            width: 100%;
+            object-fit:fill;
+        }
+        .m-tags{
+            padding-left: 5px;
+            margin-top: 5px;
+            display: flex;
+            gap: 10px;
+        }
+        .m-tags .tag{
+            background-color: azure;
+            color: black;
+            width: fit-content;
+            padding:1px 4px 1px 4px;
+            border-radius: 5px;
+            box-shadow: black 1px 1px 2px;
+        }
+        .m-about{
+            padding-top: 10px;
+
+        }
+        .m-about p{
+            padding-left: 10px;
+            width: 60vw;
+            max-height: 500px;
+        }
+        .casta{
+            display: flex;
+        }
+        .cast h2{
+            width: fit-content;
+            padding-right: 30px;
+            border-bottom: white 2px solid;
+        }
+        .casts{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 17vw 17vw 17vw 17vw;
+            grid-template-rows: auto auto;
+            width: 70vw;
+            justify-content: start;
+            grid-gap: 6px;
+        }
+        .c-card{
+            border: rgba(42, 42, 42, 0.47) solid 1px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            max-width: 17vw;
+            box-shadow: black 1px 1px;
+        }
+        .c-card img{
+            height: 12vw;
+            width: 12vw;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .c-card h3{
+            font-size: 1em;
+            font-weight: 100;
+        }
+        .m-rel-grid{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .m-rel-grid::-webkit-scrollbar{
+            display: none;
+        }
+        .rev-card{
+            margin-bottom: 5px;
+            width: 20vw;
+            max-height: 100px;
+            overflow: hidden;
+            padding: 5%;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .rev-card h3,.rev-card p{
+            color: black;
+        }
+        .m-rel-card{
+            display: flex;
+            flex-direction: column;
+            background-color: #0b7da3;
+            width: 180px;
+            min-width: 180px;
+            border-radius: 2px;
+            box-shadow: black 1px 1px 2px;
+            height: 200px;
+        }
+        .m-rel-card img{
+            object-fit: fill;
+            width: 100%;
+            height: 80%;
+        }
+        .m-Related{
+            margin-top: 10px;
+        }
+        .m-Related h2{
+            width: fit-content;
+            padding-right: 20px;
+            margin-bottom: 5px;
+            border-bottom: white 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky top-header" id="sticky">
+        <div class="logo">
+            <img src="img/movi.svg" alt="" height="25px" width="25px">
+            Movie
+        </div>
+        <nav>
+            <ul>
+                <a href="" class="active"><li>Home</li></a>
+                <a href=""><li>Movies</li></a>
+                <a href=""><li>Tv shows</li></a>
+                <a href=""><li>Web Series</li></a>
+            </ul>
+        </nav>
+        <div class="search">  
+            <label class="label" for="search"><img src="img/search.svg" alt="" width="25px" height="25px"></label>
+            <input type="search" class="input-search" name="search" placeholder="Search Movie here">
+            <img class="menu" src="img/menu.svg" alt="" width="25px" height="25px">
+          </div>
+    </div>
+    <main>
+        <div class="m-bana">
+            <div class="ban-detail">
+                <div class="m-title">
+                    <h1>God of War</h1>
+                    <p>2022 <span>1h 47m</span></p>
+                </div>
+                <div class="rate">
+                    <div class="im"></div>
+                    <p>Rating <span>4.7</span></p>
+                </div>
+            </div>
+            <div class="ban-cont">
+                <div class="ban-tr">
+                    <img src="img/gow.jpg" alt="">
+                    <button>Watch trailer</button>
+                </div>
+                <div class="ban-im">
+                    <img src="img/uncharted.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="m-tags">
+            <h3>Tags:</h3>
+            <div class="tag">Commedy</div>
+            <div class="tag">Horror</div>
+            <div class="tag">Thriller</div>
+        </div>
+        <div class="m-about">
+            <h2>About The Movie</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem 
+                vitae pariatur exercitationem omnis eveniet? Odio corrupti autem 
+                consequuntur necessitatibus, expedita quaerat? Harum veritatis 
+                nobis fuga maiores laboriosam, ex distinctio quis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Numquam culpa ex quis facere totam earum voluptates, nisi modi? 
+             Nisi nobis sint ut sunt harum consequatur eligendi rerum error ratione minus?</p>
+        </div>
+        <div class="cast">
+            <h2>Top Cast</h2>
+            <div class="casta">
+                <div class="casts">
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                    <div class="c-card">
+                        <img src="img/wednesday.webp" alt="">
+                        <h3>Character name</h3>
+                        <h3>Real name</h3>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="rev-card">
+                        <h3>Review Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab 
+                            reprehenderit ducimus consectetur at ex similique tempore pariatur 
+                            mollitia cumque perspiciatis, adipisci vel aliquam eos dignissimos 
+                            aut corrupti veritatis corporis magnam.</p>
+                    </div>
+                    <div class="rev-card">
+                        <h3>Review Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab 
+                            reprehenderit ducimus consectetur at ex similique tempore pariatur 
+                            mollitia cumque perspiciatis, adipisci vel aliquam eos dignissimos 
+                            aut corrupti veritatis corporis magnam.</p>
+                    </div>
+                    <div class="rev-card">
+                        <h3>Review Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab 
+                            reprehenderit ducimus consectetur at ex similique tempore pariatur 
+                            mollitia cumque perspiciatis, adipisci vel aliquam eos dignissimos 
+                            aut corrupti veritatis corporis magnam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-Related">
+                <h2>More Related Movies</h2>
+                <div class="m-rel-grid">
+                    <div class="m-rel-card">
+                        <img src="img/uncharted.jpg" alt="">
+                        <div class="m-rel-card-content">
+                            <h3>Movie Title</h3>
+                            <p>Rating </p>
+                        </div>
+                    </div>
+                    <div class="m-rel-card">
+                        <img src="img/uncharted.jpg" alt="">
+                        <div class="m-rel-card-content">
+                            <h3>Movie Title</h3>
+                            <p>Rating </p>
+                        </div>
+                    </div>
+                    <div class="m-rel-card">
+                        <img src="img/uncharted.jpg" alt="">
+                        <div class="m-rel-card-content">
+                            <h3>Movie Title</h3>
+                            <p>Rating </p>
+                        </div>
+                    </div>
+                    <div class="m-rel-card">
+                        <img src="img/uncharted.jpg" alt="">
+                        <div class="m-rel-card-content">
+                            <h3>Movie Title</h3>
+                            <p>Rating </p>
+                        </div>
+                    </div>
+                    <div class="m-rel-card">
+                        <img src="img/uncharted.jpg" alt="">
+                        <div class="m-rel-card-content">
+                            <h3>Movie Title</h3>
+                            <p>Rating </p>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var bar = document.getElementById("sticky")
+        window.onscroll = function() {
+
+        // pageYOffset or scrollY
+        if (window.pageYOffset > 0) {
+            bar.classList.add('dark')
+        } else {
+            bar.classList.remove('dark')
+        }
+        }
+        $('#s-icon').click(function() {
+           $('#s-input').toggleClass()
+        })
+    </script>
+</body>
+</html>

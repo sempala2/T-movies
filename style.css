@@ -4,6 +4,9 @@
     color: white;
     font-family: 'Lucida Sans';
 }
+body{
+    background-color: #201d2d;
+}
 .root{
     background-color: #201d2d;
     width: 100%;
@@ -31,7 +34,22 @@ a.active{
     display: none;
 }
 .dark{
-    background: rgba(14, 9, 30, 0.845) !important;
+    background: rgba(0, 0, 0, 0.845) !important;
+}
+.side{
+    height: 70vh;
+}
+.side .pics{
+    height: 100%;
+    padding: 5px 0px;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+.side .pics img{
+    height: 100%;
+    width: 100%;
 }
 .top-header{
     transition: ease 0.7s;
@@ -39,10 +57,11 @@ a.active{
     position:relative;
     display: flex;
     z-index: 10;
+    background-color: black;
     justify-content: space-between;
     padding-top: 10px;
     filter: blur(0.1);
-    align-items: center;
+
     height: 50px;
   
 }
@@ -52,19 +71,26 @@ a.active{
     width: 100%;
   }
 .logo{
-    font-size: 2rem;
+    font-size: 1.3rem;
     margin-left: 30px;
 }
 nav ul{
     display: flex;
     list-style-type: none;
     gap: 20px;
+    width: fit-content;
 }
 nav a{
+    display: flex;
+    align-items: center;
+    width: fit-content;
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+}
+nav li{
+    width: fit-content;
 }
 .search{
    margin-right: 1%;
@@ -73,31 +99,25 @@ nav a{
    position: relative;
 }
 .banner{
-    top: 0;
-    position: absolute;
-    height: 70vh;
-    width: 100%;
-    z-index: 1;
-    background-image: url(img/gow.jpg);
-    background-repeat: no-repeat;
-    background-blend-mode:darken;
-    background-position: right top;
-}
-.shadow-left{
+    border: #000000 1px solid;
     position: relative;
-    background: linear-gradient(to right, black 55%,transparent);
-    width: 70%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 70vh;
+    z-index: 1;
 }
 .b-txt{
+    position: absolute;
     margin-left: 10%;
-    width: 60%;
-    height: 50%; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 20 !important;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: left;
+    padding-bottom: 20px;
 }
 .banner-title{
+    text-shadow: #000000 4px 4px 6px;
     font-family: Bookman Old Style;
     font-size: 4rem;
     color: white;
@@ -109,14 +129,15 @@ nav a{
 }
 .banner-trailer{
     margin-top: 10px;
-    height: 10%;
+    height: fit-content;
     width: fit-content;
     border-radius: 10px;
     justify-self: center;
-    padding:18px 15px;
-    background-color: rgb(27, 27, 53);
+    padding:10px 15px;
+    background-color: rgb(4, 4, 97);
 }
 .m-section{
+    margin-top: 10px;
    width: 100%;
    overflow: hidden;
    
@@ -125,12 +146,13 @@ nav a{
     font-size: large;
 }
 .img{
-    background-image: url(img/uncharted.jpg);
     height: 200px;
     width: 200px;
-    border-radius: 3px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-radius: 2px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
 }
 .m-list{
     margin-top: 10px;
@@ -145,8 +167,16 @@ nav a{
 .m-list::-webkit-scrollbar{
     display: none;
 }
+.m-item{
+    background-color: white;
+    border-radius: 2px;
+}
 .m-item p{
     text-align: center;
+    color: #000000;
+}
+.m-item p::after{
+    content: " Rating: 4.6";
 }
 #s-icon{
     background-color: #22a6b3;
@@ -166,32 +196,21 @@ nav a{
   }
   .input-search{
     height: 35px;
-    width: 100px;
+    width: 200px;
     border-style: none;
     padding: 10px;
-    display: none;
-    font-size: 18px;
+    font-size: 11px;
     letter-spacing: 2px;
     outline: none;
-    border-radius: 25px;
+    border-radius: 5px;
     transition: all .5s ease-in-out;
-    background-color: #2261b3b0;
-    padding-right: 40px;
-    color:#fff;
+    background-color: #ffffffb0;
+    padding-right: 10px;
+    color:black;
     transition: all 1s ease;
-  }
-  .input-search:focus{
-    width: 250px;
-    border-radius: 10px;
-    background-color: #2261b375;
-    border-bottom:1px solid rgba(255,255,255,.5);
-    transition: all 1s ease;
-  }
-  .input-search:focus ~ .label{
-    transition: all 1s ease;
-    display: none;
   }
   .label{
+    display: none;
     line-height: 50px;
     height: 50px;
     width: 50px;
@@ -204,6 +223,12 @@ nav a{
     display: none;
   }*/
   @media (max-width: 750px){
+    .input-search{
+        display: none;
+    }
+    .label{
+        display: block;
+    }
     .search{
         display: flex;
         margin-right: 0;
@@ -215,11 +240,10 @@ nav a{
         display: none;
     }
     .top-header{
-        background-color: #00275165;
+        background-color: #000000;
         height: 40px;
     }
     nav{
-        
         width: 80%;
         left: -80%;
         top: 50px;

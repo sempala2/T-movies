@@ -4,22 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Movie center</title>
+    <style>
+        .col-md-8{
+            background: black;
+        }
+        .col-md-4{
+            background: black;
+        }
+        .banner-img{
+            position: absolute;
+            z-index: 1;
+            width: 98%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .banner-img img{
+            width: 100%;
+            z-index: 1;
+            padding: 5px;
+            height: 100%;
+        }
+    </style>
 </head>
 <body onscroll="myFunction()">
     <div class="root" >
-        <div class="sticky top-header" id="sticky">
+        <div class="top-header" id="sticky">
             <div class="logo">
                 <img src="img/movi.svg" alt="" height="25px" width="25px">
                 Movie
             </div>
             <nav>
                 <ul>
-                    <a href="" class="active"><li>Home</li></a>
-                    <a href=""><li>Movies</li></a>
-                    <a href=""><li>Tv shows</li></a>
-                    <a href=""><li>Web Series</li></a>
+                    <a href="" class="active "><li>Home</li></a>
+                    <div class="dropdown">
+                        <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><li>Movies</li></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">All</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Adventure</a></li>
+                        <li><a class="dropdown-item" href="#">Horror</a></li>
+                        <li><a class="dropdown-item" href="#">Comedy</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><li>TV shows</li></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><li>WEB Series</li></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
                 </ul>
             </nav>
             <div class="search">  
@@ -28,114 +73,194 @@
                 <img class="menu" src="img/menu.svg" alt="" width="25px" height="25px">
               </div>
         </div>
-        <div class="banner">
-            <div class="shadow-left">
+        <div class="conainer-fluid main">
+        <div class="row">
+        <div class="banner col-md-8 col-sm-12">
+            <div class="banner-img">
+                <img src="/img/gow.jpg" alt="">
+            </div>
                 <div class="b-txt">
                     <h2 class="banner-title">God of war</h2>
-                <p class="banner-descrpt">God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console, and has become a flagship title for the PlayStation brand, consisting of ten games across multiple platforms with an eleventh currently in development.</p>
-                <div class="banner-trailer"> <img src="img/youtube.svg" alt="" width="25px"> Watch trailer</div>
+                    <div class="banner-trailer"> <img src="img/youtube.svg" alt="" width="25px">Watch trailer</div>
                 </div>
+
+        </div>
+        <div class="side col-md-4 col-sm-12">
+            <div class="pics">
+                <img src="/img/gdw6.jpg" alt="">
+                <img src="/img/gdw5.jpg" alt="">
+                <img src="/img/gdw.jpg" alt="">
+                <img src="/img/gdw2.jpg" alt="">
+                <img src="/img/gdw4.jpg" alt="">
+                <img src="/img/gdw3.jpg" alt="">
             </div>
         </div>
-        <section class="m-section" style="  margin-top: 70vh;">
+        </div>
+        <section class="m-section row">
             <h2 style="margin-left:10%; font-size: 1.3rem;">New Releases <a href="" class="link"> Explore All</a></h2>
-            <div class="m-list">
+            <div class="m-list col-10">
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
-                    <p>Uncharted</p>
-                </div>
-                <div class="m-item">
-                    <div class="img"></div>               
-                    <p>Uncharted</p>
-                </div>
-                <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
             </div>
         </section>
-        <section class="m-section">
+        <section class="m-section row">
             <h2 style="margin-left:10%; font-size: 1.3rem;">Trending Movies <a href="" class="link"> Explore All</a></h2>
             
-                <div class="m-list">
+                <div class="m-list col-10">
                     <div class="m-item">
-                        <div class="img"></div>               
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
                         <p>Uncharted</p>
                     </div>
                     <div class="m-item">
-                        <div class="img"></div>               
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
                         <p>Uncharted</p>
                     </div>
                     <div class="m-item">
-                        <div class="img"></div>               
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
                         <p>Uncharted</p>
                     </div>
                     <div class="m-item">
-                        <div class="img"></div>               
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
                         <p>Uncharted</p>
                     </div>
                     <div class="m-item">
-                        <div class="img"></div>               
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
+                        <p>Uncharted</p>
+                    </div>
+                    <div class="m-item">
+                        <div class="img">
+                            <img src="/img/uncharted.jpg" alt="">
+                        </div>               
                         <p>Uncharted</p>
                     </div>
                 </div>
             
         </section>
-        <section class="m-section">
+        <section class="m-section row">
             <h2 style="margin-left:10%; font-size: 1.3rem;">Trending Series <a href="" class="link"> Explore All</a></h2>
-            <div class="m-list">
+            <div class="m-list col-10">
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
                 <div class="m-item">
-                    <div class="img"></div>               
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
+                    <p>Uncharted</p>
+                </div>
+                <div class="m-item">
+                    <div class="img">
+                        <img src="/img/uncharted.jpg" alt="">
+                    </div>               
                     <p>Uncharted</p>
                 </div>
             </div>
         </section>
     </div>
+    </div>
     <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
         var bar = document.getElementById("sticky")
         window.onscroll = function() {

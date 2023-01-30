@@ -5,10 +5,10 @@
     font-family: 'Lucida Sans';
 }
 body{
-    background-color: #201d2d;
+    background-color: #1b2051;
 }
 .root{
-    background-color: #201d2d;
+    background-color: #1b2051;
     width: 100%;
 }
 .menu{
@@ -41,10 +41,10 @@ a.active{
 }
 .side .pics{
     height: 100%;
-    padding: 5px 0px;
+    padding: 2px 0px;
     display: grid;
     gap: 1px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto;
 }
 .side .pics img{
@@ -117,9 +117,9 @@ nav li{
     padding-bottom: 20px;
 }
 .banner-title{
-    text-shadow: #000000 4px 4px 6px;
+    text-shadow: #000000 2px 2px 4px;
     font-family: Bookman Old Style;
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: white;
 }
 .banner-descrpt{
@@ -147,21 +147,22 @@ nav li{
 }
 .img{
     height: 200px;
-    width: 200px;
-    border-radius: 2px;
+    width: 170px;
+    border-radius:10px 10px 0 0;
 }
 .img img{
+    border-radius:10px 10px 0 0;
     width: 100%;
     height: 100%;
 }
 .m-list{
     margin-top: 10px;
-    gap: 20px;
+    gap: 10px;
     display: flex;
     -ms-overflow-style: none;
     margin-left: 5%;
     scrollbar-width: none;
-    height: 250px;   
+    height: 250px;
     overflow-x: auto;
 }
 .m-list::-webkit-scrollbar{
@@ -169,14 +170,11 @@ nav li{
 }
 .m-item{
     background-color: white;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 .m-item p{
     text-align: center;
     color: #000000;
-}
-.m-item p::after{
-    content: " Rating: 4.6";
 }
 #s-icon{
     background-color: #22a6b3;
@@ -223,6 +221,10 @@ nav li{
     display: none;
   }*/
   @media (max-width: 750px){
+    .side{
+        height: 50vh;
+        overflow: hidden;
+    }
     .input-search{
         display: none;
     }
@@ -255,6 +257,9 @@ nav li{
         flex-direction: column;
         background: rgba(14, 9, 30, 0.845)
     }
+    .banner{
+        height: 50vh;
+    }
     nav li{
         padding: 5px
     }
@@ -285,7 +290,7 @@ nav li{
         width:100%;
     }
     .banner-title{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .banner-descrpt{
         font-size: 1rem;

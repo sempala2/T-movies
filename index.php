@@ -1,3 +1,4 @@
+<?php require_once 'init-movies.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Movie center</title>
     <style>
-        .col-md-8{
-            background: rgb(25, 25, 71);
-        }
-        .col-md-4{
-            background-color: rgb(25, 25, 71);
-        }
+        
         .banner-img{
             position: absolute;
             z-index: 1;
@@ -28,14 +24,13 @@
             height: 100%;
         }
     </style>
-    
 </head>
 <body onscroll="myFunction()">
     <div class="root" >
         <div class="top-header" id="sticky">
             <div class="logo">
                 <img src="img/movi.svg" alt="" height="25px" width="25px">
-                Movie
+                T-Movie
             </div>
             <nav>
                 <ul>
@@ -78,85 +73,85 @@
         <div class="row">
         <div class="banner col-md-8 col-sm-12">
             <div class="banner-img">
-                <img src="/img/gow.jpg" alt="">
+                <img src="<?php echo $movie_img ?>" alt="">
             </div>
                 <div class="b-txt">
-                    <h2 class="banner-title">God of war</h2>
+                    <h2 class="banner-title"><?php echo $users->original_title ?></h2>
                     <div class="banner-trailer"> <img src="img/youtube.svg" alt="" width="25px">Watch trailer</div>
                 </div>
 
         </div>
         <div class="side col-md-4 col-sm-12">
             <div class="pics">
-                <img src="/img/gdw6.jpg" alt="">
-                <img src="/img/gdw5.jpg" alt="">
-                <img src="/img/gdw.jpg" alt="">
-                <img src="/img/gdw2.jpg" alt="">
-                <img src="/img/gdw4.jpg" alt="">
-                <img src="/img/gdw3.jpg" alt="">
+                <img src="<?php echo $img_arr[0] ?>" alt="">
+                <img src="<?php echo $img_arr[2] ?>" alt="">
+                <img src="<?php echo $img_arr[3] ?>" alt="">
+                <img src="<?php echo $img_arr[4] ?>" alt="">
+                <img src="<?php echo $img_arr[5] ?>" alt="">
+                <img src="<?php echo $img_arr[6] ?>" alt="">
             </div>
         </div>
         </div>
         <section class="m-section row">
             <h2 style="margin-left:10%; font-size: 1.3rem;">New Releases <a href="" class="link"> Explore All</a></h2>
-            <div class="m-list col-10">
+            <div class="m-list col-md-10 col-sm-12">
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                        <img src="<?php echo $p_img[0] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo ''.$p_title[0].' Rating'.$p_rate[0].'' ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[1] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[1] ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[2] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[2] ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[3] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[3] ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[4] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[4] ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[5] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[5] ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[6] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[6] ?></p>
                 </div>
                 <div class="m-item">
                     <div class="img">
-                        <img src="/img/uncharted.jpg" alt="">
+                    <img src="<?php echo $p_img[7] ?>" alt="">
                     </div>               
-                    <p>Uncharted</p>
+                    <p><?php echo $p_title[7] ?></p>
                 </div>
             </div>
         </section>
         <section class="m-section row">
             <h2 style="margin-left:10%; font-size: 1.3rem;">Trending Movies <a href="" class="link"> Explore All</a></h2>
             
-                <div class="m-list col-10">
+                <div class="m-list col-md-10 col-sm-12">
                     <div class="m-item">
                         <div class="img">
-                            <img src="/img/uncharted.jpg" alt="">
+                            <img src="img/uncharted.jpg" alt="">
                         </div>               
                         <p>Uncharted</p>
                     </div>
@@ -207,7 +202,7 @@
         </section>
         <section class="m-section row">
             <h2 style="margin-left:10%; font-size: 1.3rem;">Trending Series <a href="" class="link"> Explore All</a></h2>
-            <div class="m-list col-10">
+            <div class="m-list col-md-10 col-sm-12">
                 <div class="m-item">
                     <div class="img">
                         <img src="/img/uncharted.jpg" alt="">
